@@ -116,26 +116,31 @@ BOARD_MAIN_PARTITION_LIST := product vendor system
 #BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist
 BOARD_SUPPRESS_SECURE_ERASE := true
 
-# TWRP Configuration
-#TARGET_RECOVERY_QCOM_RTC_FIX := true
-RECOVERY_SDCARD_ON_DATA := true
+# TWRP specific build flags
 TW_THEME := portrait_hdpi
+RECOVERY_SDCARD_ON_DATA := true
 TW_EXTRA_LANGUAGES := true
-TW_SCREEN_BLANK_ON_BOOT := false
-TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
-TW_DEFAULT_BRIGHTNESS := 1000
-TW_Y_OFFSET := 25
-TW_H_OFFSET := 0
+TW_DEFAULT_BRIGHTNESS := 1200
+TW_SKIP_COMPATIBILITY_CHECK := true
+TW_Y_OFFSET := 50
+TW_H_OFFSET := -50
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_TWRPAPP := true
+TW_INCLUDE_LOGICAL := oppo_product oppo_engineering preload_common
+TW_OZIP_DECRYPT_KEY := 0000
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/power_supply/battery/temp
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 TW_NO_SCREEN_BLANK := true
-
-# TWRP_EVENT_LOGGING := true
-TWRP_INCLUDE_LOGCAT := true
-# TWRP Debug Flags
-TARGET_USES_LOGD := true
+TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_REPACKTOOLS := true
+TW_NO_REBOOT_RECOVERY := true
+TW_SUPPORT_INPUT_1_2_HAPTICS := true
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # SHRP Flags
 # Device codename
