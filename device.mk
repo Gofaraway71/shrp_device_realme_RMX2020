@@ -22,9 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 LOCAL_PATH := device/realme/RMX2020
 
 # Qcom standerd Decryption
-#PRODUCT_PACKAGES += \
-#    qcom_decrypt \
-#    qcom_decrypt_fbe
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -36,7 +36,7 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Apex libraries
-#PRODUCT_HOST_PACKAGES += \
+PRODUCT_HOST_PACKAGES += \
     libandroidicu
 
 # HACK: Set vendor patch level
