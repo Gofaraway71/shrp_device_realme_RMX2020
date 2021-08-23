@@ -132,11 +132,12 @@ BOARD_ROOT_EXTRA_FOLDERS += metadata
 
 # Crypto
 PLATFORM_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 20.1.0
 VENDOR_SECURITY_PATCH := 2099-12-31
-PLATFORM_VERSION := 16.1.0
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_USE_FSCRYPT_POLICY := 1
 
 # System as root
 BOARD_SUPPRESS_SECURE_ERASE := true
@@ -165,11 +166,11 @@ TW_INCLUDE_LOGICAL := oppo_product oppo_engineering preload_common
 TW_OZIP_DECRYPT_KEY := 0000
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/power_supply/battery/temp
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
-TW_NO_SCREEN_BLANK := true
+#TW_NO_SCREEN_BLANK := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_NO_REBOOT_RECOVERY := true
-TW_SUPPORT_INPUT_1_2_HAPTICS := true
+#TW_SUPPORT_INPUT_1_2_HAPTICS := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 
@@ -190,7 +191,7 @@ TARGET_USES_LOGD := true
 # Path of your SHRP Tree
 SHRP_PATH := device/realme/RMX2020
 # Maintainer name *
-SHRP_MAINTAINER := sarthakroy2002
+SHRP_MAINTAINER := Gofaraway
 # Device codename *
 SHRP_DEVICE_CODE := RMX2020
 # Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
