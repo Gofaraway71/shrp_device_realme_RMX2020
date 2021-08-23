@@ -193,7 +193,7 @@ SHRP_PATH := device/realme/RMX2020
 # Maintainer name *
 SHRP_MAINTAINER := Gofaraway
 # Device codename *
-SHRP_DEVICE_CODE := RMX2020
+SHRP_DEVICE_CODE := RMX2151
 # Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
 SHRP_REC_TYPE := Treble
 # Recovery Type (It can be A/B or A_only) [Only for About Section] *
