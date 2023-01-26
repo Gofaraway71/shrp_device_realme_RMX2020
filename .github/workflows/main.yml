@@ -47,6 +47,10 @@ jobs:
             sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
             sudo chmod a+rx /usr/local/bin/repo
             
+       - name: Cleanup
+         uses: rokibhasansagar/slimhub_actions@main
+         # That's it! Now use your normal steps            
+            
        - name: Sync recovery source and device tree
          run: |
              mkdir work
