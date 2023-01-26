@@ -32,7 +32,10 @@ jobs:
     steps:
        - name: Checkout
          uses: actions/checkout@master
-         
+       - name: Cleanup
+         uses: rokibhasansagar/slimhub_actions@main
+         # That's it! Now use your normal steps            
+                     
        - name: Initializing environment
          run: |
             sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d
@@ -46,10 +49,6 @@ jobs:
             sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev repo rsync flex curl  bison aria2
             sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
             sudo chmod a+rx /usr/local/bin/repo
-            
-       - name: Cleanup
-         uses: rokibhasansagar/slimhub_actions@main
-         # That's it! Now use your normal steps            
             
        - name: Sync recovery source and device tree
          run: |
